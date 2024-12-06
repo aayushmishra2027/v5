@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A.M | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
+    <style>
+        body {
+            font-family: 'Bahnschrift Semibold Condensed', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: #176ad4;
+            color: #d8d7d1;
+        }
+        .max-width {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px;
+        }
+        .navbar {
+            background: #d8d7d1;
+            color: #000611;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+        .navbar .logo a {
+            color: #000611;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .navbar .menu {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: flex-end;
+        }
+        .navbar .menu li {
+            margin: 0 15px;
+        }
+        .navbar .menu li a {
+            color: #000611;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .navbar .menu li a:hover {
+            color: #d8d7d1;
+        }
+        .home {
+            background: url('images/home-bg.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #d8d7d1;
+            text-align: center;
+        }
+        .home-content {
+            max-width: 600px;
+        }
+        .home-content a {
+            background: #000611;
+            color: #d8d7d1;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .home-content a:hover {
+            background: #e64a19;
+        }
+        .section {
+            padding: 60px 0;
+        }
+        .title {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 30px;
+            color: #d8d7d1;
+        }
+        .about-content, .skills-content, .contact-content {
+            display: flex;
+            flex-wrap: wrap; /* Allow wrapping for smaller screens */
+            justify-content: space-between;
+            align-items: center;
+        }
+        .about-content .column, .skills-content .column {
+            flex: 1 1 300px; /* Allow columns to grow and shrink */
+            margin: 20px; /* Add margin for spacing */
+            min-width: 250px; /* Minimum width for responsiveness */
+        }
+        .card {
+            background: #ff5722;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .footer {
+            text-align: center;
+            padding: 20px 0;
+            background: #d8d7d1;
+            color: #ff5722;
+        }
+
+        /* Media Queries for responsive design */
+        @media (max-width: 768px) {
+            .navbar .menu {
+                flex-direction: column;
+                align-items: center;
+            }
+            .home {
+                height: auto;
+                padding: 60px 0;
+            }
+            .home-content {
+                padding: 0 20px;
+            }
+            .title {
+                font-size: 28px;
+            }
+            .about-content, .skills-content, .contact-content {
+                flex-direction: column; /* Stack columns on smaller screens */
+            }
+            .about-content .column, .skills-content .column {
+                margin: 10px 0; /* Adjust margin for stacked layout */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .title {
+                font-size: 24px;
+            }
+            .home-content a {
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="max-width">
+            <div class="logo"><a href="#">Portfolio</a></div>
+            <ul class="menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about-me">About-Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact-me">Contact-Me</a></li>
+            </ul>
+        </div>
+    </div>
+    <section id="home" class="home">
+        <div class="home-content">
+            <h1>Namaste!</h1>
+            <p>I'm Aayush Anil Mishra</p>
+            <a href="#about">Learn More</a>
+        </div>
+    </section>
+    <section id="about" class="section">
+        <div class="max-width">
+            <h2 class="title">About Me</h2>
+            <div class="about-content">
+                <div class="column">
+                    <div class="card">
+                        <h3>Who I Am</h3>
+                        <p>Brief description about yourself.</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card">
+                        <h3>My Journey</h3>
+                        <p>Details about your journey and experiences.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="skills" class="section">
+        <div class="max-width">
+            <h2 class="title">My Skills</h2>
+            <div class="skills-content">
+                <div class="column">
+                    <div class="card">
+                        <h3>Skill 1</h3>
+                        <p>Description of skill 1.</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card">
+                        <h3>Skill 2</h3>
+                        <p>Description of skill 2.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="section">
+        <div class="max-width">
+            <h2 class="title">Contact Me</h2>
+            <div class="contact-content">
+                <div class="column">
+                    <div class="card">
+                        <h3>Email</h3>
+                        <p>your.email@example.com</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card">
+                        <h3>Phone</h3>
+                        <p>(123) 456-7890</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <p>&copy; 2023 My Portfolio. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
